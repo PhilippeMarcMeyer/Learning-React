@@ -35,6 +35,49 @@ Note : if I provide a number in a compnent prop I use curly braces :
 Of course an object keeps its js syntax _It's confusing at the beginning but it's only logical_
 ```
 Card.defaultProps = {
+    cardColor: "blue",
+    width: 100,
+    height:100
+}
+```
+The whol picture
+```
+// app.js
+import React from "react"
+import Card from "./Card"
+
+function App() {
+    return (
+        <div>
+            <Card cardColor="red" height={200} width={400} />
+            <Card />
+            <Card cardColor="green" />
+        </div>
+    )
+}
+
+export default App
+
+// Card.js
+import React from "react"
+
+function Card(props) {
+    const styles = {
+        backgroundColor: props.cardColor,
+        height: props.height,
+        width: props.width
+    }
+    
+    return (
+        <div style={styles}></div>
+    )
+}
+
+Card.defaultProps = {
+    cardColor: "blue",
+    height: 100,
     width: 100
 }
+
+export default Card
 ```
