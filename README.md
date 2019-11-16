@@ -119,3 +119,13 @@ class Card extends React.Component {
     ...
  
 ```   
+### Prop types 
+#### Type checking and required
+
+``` 
+npm install prop-types
+``` 
+``` 
+import PropTypes from "prop-types"
+``` 
+
