@@ -106,3 +106,16 @@ Card.defaultProps = {
 
 export default Card
 ```
+
+In case of the class component we can use this syntax :
+
+```
+class Card extends React.Component {
+    static defaultProps = {
+        cardColor: "blue",
+        height: 100,
+        width: 100
+    }
+    ...
+ 
+```   
