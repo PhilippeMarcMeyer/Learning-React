@@ -1,7 +1,7 @@
 # Learning-React
 Personnal notes from Bob Ziroll
 
-#### React.Fragment
+### React.Fragment
 
 To avoir nesting div every time you include a child in a parent component use <React.Fragement> </React.Fragment> instead of div
 
@@ -20,9 +20,9 @@ export default App
 ```
 Be carefull : the DOM hiearachy is changed ! Everything is flatten.
 
-#### Default props
+### Default props
 
-Fallback props in case it is not provided
+#### Fallback props in case it is not provided
 ```
 Card.defaultProps = {
     cardColor: "blue"
@@ -107,7 +107,7 @@ Card.defaultProps = {
 export default Card
 ```
 
-In case of the class component we can use this syntax :
+#### In case of the class component we can use this syntax :
 
 ```
 class Card extends React.Component {
