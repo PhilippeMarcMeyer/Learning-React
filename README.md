@@ -125,7 +125,9 @@ class Card extends React.Component {
 ``` 
 npm install prop-types
 ``` 
+And in the component :
 ``` 
+import React from "react"
 import PropTypes from "prop-types"
 ``` 
 
