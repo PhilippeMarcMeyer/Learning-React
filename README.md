@@ -80,4 +80,29 @@ Card.defaultProps = {
 }
 
 export default Card
+
+// Class component version (to have on example)
+import React from "react"
+
+class Card extends React.Component {
+    render() {
+        const styles = {
+            backgroundColor: this.props.cardColor,
+            height: this.props.height,
+            width: this.props.width
+        }
+        
+        return (
+            <div style={styles}></div>
+        )
+    }
+}
+
+Card.defaultProps = {
+    cardColor: "blue",
+    height: 100,
+    width: 100
+}
+
+export default Card
 ```
