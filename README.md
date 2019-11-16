@@ -141,3 +141,4 @@ Card.defaultProps = {
     width: 100
 }
 ```
+https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes
