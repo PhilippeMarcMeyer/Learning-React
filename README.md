@@ -142,3 +142,12 @@ Card.defaultProps = {
 }
 ```
 https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes
+
+#### Example with an enum
+```
+Card.propTypes = {
+    cardColor: PropTypes.oneOf(["red", "blue"]),
+    height: PropTypes.number.isRequired,
+    width: PropTypes.number
+    }
+```
