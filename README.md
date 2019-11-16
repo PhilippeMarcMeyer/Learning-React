@@ -32,7 +32,7 @@ Note : if I provide a number in a compnent prop I use curly braces :
 ```
 <Card cardColor="red" width={200} />
 ```
-Of course an object keeps its js syntax _It's confusing at the beginning but it's only logical
+Of course an object keeps its js syntax _It's confusing at the beginning but it's only logical_
 ```
 Card.defaultProps = {
     width: 100
