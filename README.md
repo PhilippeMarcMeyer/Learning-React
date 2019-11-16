@@ -18,3 +18,5 @@ function App() {
 }
 export default App
 ```
+Be carefull : the DOM hiearachy is changed ! Everything is flatten.
+
