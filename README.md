@@ -28,4 +28,13 @@ Card.defaultProps = {
     cardColor: "blue"
 }
 ```
-If I provide a number in a prop I use curly braces : <Card cardColor="red" width={200} />
+Note : if I provide a number in a compnent prop I use curly braces : 
+```
+<Card cardColor="red" width={200} />
+```
+Of course an object keeps its js syntax _It's confusing at the beginning but it's only logical
+```
+Card.defaultProps = {
+    width: 100
+}
+```
