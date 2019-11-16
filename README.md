@@ -120,7 +120,7 @@ class Card extends React.Component {
  
 ```   
 ### Prop types 
-#### Type checking and required
+#### Type checking (dev tool mainly) and required
 
 ``` 
 npm install prop-types
@@ -130,4 +130,14 @@ And in the component :
 import React from "react"
 import PropTypes from "prop-types"
 ``` 
-
+And then :
+```
+Card.propTypes = {
+    cardColor: PropTypes.string.isRequired
+}
+// with no default prop then
+Card.defaultProps = {
+    height: 100,
+    width: 100
+}
+```
