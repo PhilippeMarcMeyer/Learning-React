@@ -25,10 +25,17 @@ constructor(){
 }
 ```
 
+### CObject destructuring :
+```
+const {count} = this.state // get the count variable
+const {count,color} = this.state // get 2 variables
+const {count:number} = this.state // get a variable number with the value of state.count
+```
 
 ### React.Fragment
 
-To avoir nesting div every time you include a child in a parent component use <React.Fragement> </React.Fragment> instead of div
+To av{count} = this.state // get the count variable
+const {count,color} oir nesting div every time you include a child in a parent component use <React.Fragement> </React.Fragment> instead of div
 
 ```
 import React from "react"
