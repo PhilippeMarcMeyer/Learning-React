@@ -1,6 +1,31 @@
 # Learning-React
 Personnal notes from Bob Ziroll
 
+### Arrow functions
+They allow to have no binding for functions in the constructor of class Components.
+Ex : 
+```
+increment = () => {
+    this.setState(prevState => {
+        return {
+            count : prevState.count + 1;
+        }
+    }
+}
+```
+### Constructor is not mandatoy :
+```
+state = {count:0}
+```
+instead of 
+```
+constructor(){
+    super()
+    this.state = {count:0}
+}
+```
+
+
 ### React.Fragment
 
 To avoir nesting div every time you include a child in a parent component use <React.Fragement> </React.Fragment> instead of div
