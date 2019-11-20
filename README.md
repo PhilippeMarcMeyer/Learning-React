@@ -1,6 +1,8 @@
 # Learning-React
 Personnal notes from Bob Ziroll
 
+## Introduction
+
 ### Arrow functions
 They allow to have no binding for functions in the constructor of class Components.
 Ex : 
@@ -183,3 +185,14 @@ Card.propTypes = {
     width: PropTypes.number
     }
 ```
+
+## Reusability
+
+DRY
+
+Bob talks about inheritance and composition
+
+
+Composition over inheritance
+
+https://www.youtube.com/watch?v=wfMtDGfHWpA&feature=youtu.be
