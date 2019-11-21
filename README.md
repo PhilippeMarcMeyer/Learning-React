@@ -236,7 +236,7 @@ bruno.bark() // "Woof, I am Bruno"
 The Components are rendered as self closing elements ```<Navbar/> ```
 
 Call for Action 
-
+Here is a non re-usable component :
 
 App.js :
 ```
@@ -268,3 +268,45 @@ function CTA() {
 
 export default CTA
 ```
+CTA() provides the basic structure and is reusable thru props
+
+```
+import React from "react"
+
+function CTA(props) {
+    return (
+        <div className="border">
+            {props.children}
+        </div>
+    )
+}
+
+export default CTA
+```
+```
+import React from "react"
+import CTA from "./CTA"
+
+function App() {
+    return (
+        <div>
+            <CTA position="right">
+                <h1>This is an important CTA</h1>
+                <button>Click me now or you'll miss out!</button>
+            </CTA>
+            
+            <CTA>
+                <form>
+                    <input type="email" placeholder="Enter email address here"/>
+                    <br />
+                    <button>Submit</button>
+                </form>
+            </CTA>
+        </div>
+    )
+}
+
+export default App
+```
+
+
