@@ -235,5 +235,36 @@ bruno.bark() // "Woof, I am Bruno"
 
 The Components are rendered as self closing elements ```<Navbar/> ```
 
+Call for Action 
 
 
+App.js :
+```
+import React from "react"
+import CTA from "./CTA"
+
+function App() {
+    return (
+        <div>
+            <CTA />
+        </div>
+    )
+}
+
+export default App
+```
+CTA.js
+```
+import React from "react"
+
+function CTA() {
+    return (
+        <div className="border">
+            <h1>This is an important CTA</h1>
+            <button>Click me now or you'll miss out!</button>
+        </div>
+    )
+}
+
+export default CTA
+```
