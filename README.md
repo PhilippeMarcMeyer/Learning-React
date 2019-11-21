@@ -27,7 +27,7 @@ constructor(){
 }
 ```
 
-### CObject destructuring :
+### Object destructuring :
 ```
 const {count} = this.state // get the count variable
 const {count,color} = this.state // get 2 variables
@@ -192,8 +192,7 @@ DRY
 
 Bob talks about inheritance and composition
 
-
-Composition over inheritance
+### Composition over inheritance
 
 https://www.youtube.com/watch?v=wfMtDGfHWpA&feature=youtu.be Fun Fun Function : Mattias Petter Johansson, mpj for short
 
@@ -232,9 +231,9 @@ const bruno =  murderRobotDog('bruno')
 bruno.bark() // "Woof, I am Bruno"
 ```
 
+### Children 
 
-
-
+The Components are rendered as self closing elements <Navbar/>
 
 
 
