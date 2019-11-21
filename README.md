@@ -195,4 +195,46 @@ Bob talks about inheritance and composition
 
 Composition over inheritance
 
-https://www.youtube.com/watch?v=wfMtDGfHWpA&feature=youtu.be
+https://www.youtube.com/watch?v=wfMtDGfHWpA&feature=youtu.be Fun Fun Function : Mattias Petter Johansson, mpj for short
+
+He says composition is a design pattern that is build around what things (objects) DO and inheritance around what what they are
+He cleary favours composition as is is more flexible as "humans cannot predict future"
+
+the action objects are they designed first : the contains simple methods like a mover that moves(), a singer that sings() etc...
+and build composite objects that use assign to get the the action methods 
+
+Here is his funny example :
+
+The object receives its state from outside as a parameter
+and gets its methods from other basic objects :
+```
+const barker = (state) => ({
+  bark: () => console.log('Woof, I am ' + state.name)
+})
+const driver = (state) => ({
+  drive: () => state.position = state.position + state.speed
+})
+
+const murderRobotDog = (name)  => {
+  let state = {
+    name,
+    speed: 100,
+    position: 0
+  }
+  return Object.assign(
+        {},
+        barker(state),
+        driver(state),
+        killer(state)
+    )
+}
+const bruno =  murderRobotDog('bruno')
+bruno.bark() // "Woof, I am Bruno"
+```
+
+
+
+
+
+
+
