@@ -233,7 +233,7 @@ bruno.bark() // "Woof, I am Bruno"
 
 ### Children 
 
-The Components are rendered as self closing elements <Navbar/>
+The Components are rendered as self closing elements ```<Navbar/> ```
 
 
 
