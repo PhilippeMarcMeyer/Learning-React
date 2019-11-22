@@ -372,3 +372,17 @@ function App(props) {
 const PointlessHOC = withPointlessHOC(App)
 export default PointlessHOC
 ```
+withExtraPropAdded.js
+```
+import React from "react"
+
+export function withExtraPropAdded(component) {
+    const Component = component
+    return function(props) {
+        return (
+            <Component anotherProp="Blah blah blah" {...props} />
+        )
+    }
+}
+```
+
