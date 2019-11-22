@@ -385,4 +385,30 @@ export function withExtraPropAdded(component) {
     }
 }
 ```
+#### Exercice :
 
+App.js
+```
+import React from "react"
+import {withFavoriteNumber} from "./withFavoriteNumber"
+function App(props) {
+    return (
+        <div>{props.favoriteNumber}</div>
+    )
+}
+
+const PreferateNumber = withFavoriteNumber(App)
+export default PreferateNumber
+```
+withFavoriteNumber.js
+```
+import React from "react"
+export function withFavoriteNumber(component) {
+    const Component = component
+        return function(props){
+            return(
+                <Component favoriteNumber={7} {...props}/>
+            )
+        }
+}
+```
