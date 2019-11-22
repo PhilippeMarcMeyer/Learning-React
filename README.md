@@ -323,6 +323,26 @@ or in  line :
 ```
 export default withUpgrader(aComponent)
 ```
+index.html
+```
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script src="index.pack.js"></script>
+    </body>
+</html>
+```
+index.js
+```
+import React from "react"
+import ReactDOM from "react-dom"
+import App from "./App"
+
+ReactDOM.render(<App />, document.getElementById("root"))
+```
 withPointlessHOC.js : 
 ```
 import React from "react"
