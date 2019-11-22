@@ -315,4 +315,7 @@ Like high order function (that take another function as parameter : ex array.fil
 
 It's a function that takes a component as argument and returns another component with new features
 
-
+```
+const changedComponent = withUpgrader(aComponent)
+export default changedComponent
+```
