@@ -319,3 +319,36 @@ It's a function that takes a component as argument and returns another component
 const changedComponent = withUpgrader(aComponent)
 export default changedComponent
 ```
+or in  line :
+```
+export default withUpgrader(aComponent)
+```
+withPointlessHOC.js : 
+```
+import React from "react"
+
+// A function that takes a component as its first argument and returns a new component that wraps the given component, providing extra capabilities to it.
+
+export function withPointlessHOC(component) {
+    const Component = component
+    return function(props) {
+        return (
+            <Component {...props} />
+        )
+    }
+}
+```
+App.js : 
+```
+import React from "react"
+import {withPointlessHOC} from "./withPointlessHOC"
+
+function App(props) {
+    return (
+        <div>Hello world!</div>
+    )
+}
+
+const PointlessHOC = withPointlessHOC(App)
+export default PointlessHOC
+```
