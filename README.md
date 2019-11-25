@@ -412,3 +412,6 @@ export function withFavoriteNumber(component) {
         }
 }
 ```
+
+### Render props
+
