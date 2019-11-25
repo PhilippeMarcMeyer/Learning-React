@@ -415,3 +415,81 @@ export function withFavoriteNumber(component) {
 
 ### Render props
 
+Not so easy to grasp at the beginning 
+instead of passing simple properties in the Component let's pass a function and le't call it render !
+
+Example of Bob Ziroll :
+
+App.js
+```
+import React from "react"
+import Favorite from "./Favorite"
+
+function App() {
+    return (
+        <div>
+            <Favorite />
+        </div>
+    )
+}
+
+export default App
+
+```
+Favorite.js will user reusable Toggler.js Component
+```
+import React, {Component} from "react"
+import Toggler from "./Toggler"
+
+function Favorite(props) {
+    return (
+        <Toggler render={function(on,toggle) {
+            return (
+                <div>
+                    <h3>Click heart to favorite</h3>
+                    <h1>
+                        <span 
+                            onClick={toggle}
+                        >
+                            {on ? "❤️" : "♡"}
+                        </span>
+                    </h1>
+                </div>
+            )
+        }}/>
+    ) 
+}
+
+export default Favorite
+```
+Toggler.js
+```
+
+import React, {Component} from "react"
+
+class Toggler extends Component {
+    state = {
+        on: this.props.defaultOnValue
+    }
+    
+    toggle = () => {
+        this.setState(prevState => {
+            return {
+                on: !prevState.on
+            }
+        })
+    }
+    
+    render() {
+        return (
+            <div>
+                {this.props.render(this.state.on,this.toggle)}
+            </div>
+        )
+    }
+}
+
+export default Toggler
+``` 
+
+
