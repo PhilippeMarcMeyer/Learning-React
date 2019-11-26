@@ -631,3 +631,9 @@ export default DataFetcher
 ```
 
 I was able to add error handling easily :-)
+
+### React's Tree rendering
+
+When a component needs rendeeing then React also renders its children and the children of its children ans so on and i might be very costly.
+
+
