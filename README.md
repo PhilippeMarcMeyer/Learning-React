@@ -518,6 +518,7 @@ function Menu(props) {
 
 export default Menu
 ```
+#### Exercice => DataFetcher
 
 I find these render props difficult to grasp : they are usefull to make reusable Components
 
