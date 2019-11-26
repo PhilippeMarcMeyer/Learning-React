@@ -519,3 +519,58 @@ function Menu(props) {
 export default Menu
 ```
 
+I find these render props difficult to grasp : they are usefull to make reusable Components
+
+DataFetcher.js
+```
+import React, {Component} from "react"
+
+class DataFetcher extends Component {
+    state = {
+        loading: false,
+        data: null
+    }
+    
+    componentDidMount() {
+        this.setState({loading: true})
+        fetch(this.props.url)
+            .then(res => res.json())
+            .then(data => this.setState({data: data, loading: false}))
+    }
+    
+    render() {
+        return (
+            this.props.children(this.state.data, this.state.loading)
+        )
+    }
+}
+
+export default DataFetcher
+```
+
+this.props.children(this.state.data, this.state.loading)
+
+is a nameless function that will be defined in the calling Component (here App.js)
+
+App.js
+```
+import React from "react"
+import DataFetcher from "./DataFetcher"
+
+function App() {    
+    return (
+        <div>
+            <DataFetcher url="https://swapi.co/api/people/1">
+                {(data, loading) => (
+                        loading ? 
+                        <h1>Loading...</h1> :
+                        <p>{JSON.stringify(data)}</p>
+                    )
+                }}
+            </DataFetcher>
+        </div>
+    )
+}
+
+export default App
+```
