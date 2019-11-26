@@ -575,3 +575,59 @@ function App() {
 
 export default App
 ```
+#### Another exercice : add error handling
+
+App.js
+```
+import React from "react"
+import DataFetcher from "./DataFetcher"
+
+function App() {    
+    return (
+        <div>
+            <DataFetcher url="https://swapi.co/api/people/1">
+                {({data, loading,error}) => (
+                    error ? 
+                    <h1>{error}</h1> :
+                    (loading ? 
+                    <h1>Loading...</h1> :
+                    <p>{JSON.stringify(data)}</p>)
+                )}
+            </DataFetcher>
+        </div>
+    )
+}
+
+export default App
+```
+DataFetcher.js
+
+import React, {Component} from "react"
+
+class DataFetcher extends Component {
+    state = {
+        loading: false,
+        data: null,
+        error : null
+    }
+    
+    componentDidMount() {
+        this.setState({loading: true})
+        fetch(this.props.url)
+            .then(res => res.json())
+            .then(data => this.setState({data, loading: false}))
+            .catch(err => this.setState({error:err.message, loading: false}))
+    }
+    
+    render() {
+        const {data, loading,error} = this.state
+        return (
+            this.props.children({data, loading,error})
+        )
+    }
+}
+
+export default DataFetcher
+```
+
+I was able to add error handling easily :-)
