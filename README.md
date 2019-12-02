@@ -636,4 +636,10 @@ I was able to add error handling easily :-)
 
 When a component needs rendeeing then React also renders its children and the children of its children ans so on and i might be very costly.
 
+## Optimisation
+### shouldComponentUpdate()
+Lifecycle method
+If you set it manually you should loop on the props to determine if something was changed, use PureComponent instead of cmponent
+
+
 
