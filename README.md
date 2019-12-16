@@ -646,8 +646,10 @@ Will render only when needed : use only Class based components
 ```
 import React, {PureComponent} from "react"
 ```
+
 ### React.memo()
 A version of pure.component that ca be used with fonctional components
+
 ```
 export default React.memo(GrandParent)
 ```
