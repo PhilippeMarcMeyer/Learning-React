@@ -673,3 +673,15 @@ function areEqual(prevProps, nextProps) {
 
 export default React.memo(GrandParent, areEqual)
 ```
+
+Premature optimisation can be costly !
+
+First implement features ans then shearch for optimisation if needed
+
+### React Context
+since v 16.3
+
+Its not possible to pass data to siblings so if 2 siblings need data we have to put State in their parent 
+and one of the parent's sibling needs to share data : up we go !
+
+The problem arises when a faraway components needs its share of data and that we have to put state at the highest level of the App and pass props all the way down : its called props drilling !
