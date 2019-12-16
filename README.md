@@ -654,3 +654,16 @@ export default React.memo(GrandParent)
 so it's a high order component (a component that takes a component as imput and returns a comonent as output)
 it uses a cached version of the component and compares it the actual component props
 
+You can provide your own areEqual fonction (that will overide the internal areEqual function)
+
+```
+function areEqual(prevProps, nextProps) {
+  /*
+  return true if passing nextProps to render would return
+  the same result as passing prevProps to render,
+  otherwise return false
+  */
+}
+
+export default React.memo(GrandParent, areEqual)
+```
