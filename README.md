@@ -648,4 +648,9 @@ import React, {PureComponent} from "react"
 ```
 ### React.memo()
 A version of pure.component that ca be used with fonctional components
+```
+export default React.memo(GrandParent)
+```
+so it's a high order component (a component that takes a component as imput and returns a comonent as output)
+it uses a cached version of the component and compares it the actual component props
 
