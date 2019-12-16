@@ -639,7 +639,13 @@ When a component needs rendeeing then React also renders its children and the ch
 ## Optimisation
 ### shouldComponentUpdate()
 Lifecycle method
-If you set it manually you should loop on the props to determine if something was changed, use PureComponent instead of cmponent
+If you set it manually you should loop on the props to determine if something was changed, use PureComponent instead of component
 
-
+### pureComponent
+Will render only when needed : use only Class based components 
+```
+import React, {PureComponent} from "react"
+```
+### React.memo()
+A version of pure.component that ca be used with fonctional components
 
