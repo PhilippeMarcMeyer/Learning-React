@@ -523,6 +523,7 @@ export default Menu
 I find these render props difficult to grasp : they are usefull to make reusable Components
 
 DataFetcher.js
+
 ```
 import React, {Component} from "react"
 
@@ -547,6 +548,7 @@ class DataFetcher extends Component {
 }
 
 export default DataFetcher
+
 ```
 
 this.props.children(this.state.data, this.state.loading)
@@ -600,8 +602,10 @@ function App() {
 
 export default App
 ```
+
 DataFetcher.js
 
+```
 import React, {Component} from "react"
 
 class DataFetcher extends Component {
