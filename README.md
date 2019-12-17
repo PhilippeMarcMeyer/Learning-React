@@ -706,4 +706,28 @@ ReactDOM.render(
     document.getElementById("root")
 )
 ```
+The teacher, Bob Ziroll, put evrything in the same file for use to unsderstand better and go step by step, but then says the context should go in its own file :
+
+themeContext.js
+```
+import React from "react"
+const ThemeContext = React.createContext()
+export default ThemeContext
+```
+
+and then import the ThemeContext in index.js
+```
+import React from "react"
+import ReactDom from "react-dom"
+import ReactContext from "./themeContext.js"
+
+ReactDom.render(
+<ReactContext.Provider>
+<App/>
+</ReactContext.Provider>,
+document.getElementById("root")
+)
+
+```
+
 
