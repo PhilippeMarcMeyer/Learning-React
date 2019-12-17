@@ -35,10 +35,7 @@ const {count:number} = this.state // get a variable number with the value of sta
 ```
 
 ### React.Fragment
-
-To av{count} = this.state // get the count variable
-const {count,color} oir nesting div every time you include a child in a parent component use <React.Fragement> </React.Fragment> instead of div
-
+Use <React.Fragement> </React.Fragment> instead of div
 ```
 import React from "react"
 import Child from "./Child"
