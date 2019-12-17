@@ -689,6 +689,7 @@ The components that need to provide information will be wrapped into a PROVIDER
 and the components that need information will be wrapped in a CONSUMER
 
 #### Creating a context
+Here we create a context and wrap the entire App in it and pass data with the value property
 ```
 import React from "react"
 import ReactDOM from "react-dom"
@@ -699,7 +700,7 @@ const ThemeContext = React.createContext()
 // ThemeContext.Provider & ThemeContext.Consumer
 
 ReactDOM.render(
-    <ThemeContext.Provider>
+    <ThemeContext.Provider value={"light"}>
     <App />
     </ThemeContext.Provider>,
     document.getElementById("root")
