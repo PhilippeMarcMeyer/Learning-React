@@ -685,5 +685,24 @@ The problem arises when a faraway components needs its share of data and that we
 
 Context provides a way to pass information to the components without using the props system
 
-The components that need to provide information will be wrapped into a a PROVIDER
+The components that need to provide information will be wrapped into a PROVIDER
 and the components that need information will be wrapped in a CONSUMER
+
+#### Creating a context
+```
+import React from "react"
+import ReactDOM from "react-dom"
+
+import App from "./App"
+
+const ThemeContext = React.createContext()
+// ThemeContext.Provider & ThemeContext.Consumer
+
+ReactDOM.render(
+    <ThemeContext.Provider>
+    <App />
+    </ThemeContext.Provider>,
+    document.getElementById("root")
+)
+```
+
