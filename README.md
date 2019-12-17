@@ -733,7 +733,9 @@ Header.js
 ```
 import React, {Component} from "react"
 import ThemeContext from "./themeContext"
+
 class Header extends Component {
+    static contextType = ThemeContext
     render() {
         const theme = this.context
         return (
@@ -745,6 +747,7 @@ class Header extends Component {
 }
 
 export default Header
+
 ```
 
 
