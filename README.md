@@ -719,7 +719,7 @@ and then import the ThemeContext in index.js
 ```
 import React from "react"
 import ReactDom from "react-dom"
-import ReactContext from "./themeContext.js"
+import ReactContext from "./themeContext"
 
 ReactDom.render(
 <ReactContext.Provider>
@@ -729,5 +729,23 @@ document.getElementById("root")
 )
 
 ```
+Header.js
+```
+import React, {Component} from "react"
+import ThemeContext from "./themeContext"
+class Header extends Component {
+    render() {
+        const theme = this.context
+        return (
+            <header className={`${theme}-theme`}>
+                <h2>Light Theme</h2>
+            </header>
+        )    
+    }
+}
+
+export default Header
+```
+
 
 
