@@ -750,7 +750,7 @@ export default Header
 
 ```
 #### Context Consumer
-
+We use render props
 ```
 import React from "react"
 import ThemeContext from "./themeContext"
