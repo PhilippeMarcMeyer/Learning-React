@@ -791,4 +791,25 @@ function App() {
 }
 export default App
 ```
+Make Button function better :
 
+Button.js
+```
+import React from "react"
+import PropTypes from "prop-types"
+import ThemeContext from "./themeContext"
+
+function Button(props) {
+    return (
+        <button className={`${props.theme}-theme`}>Switch Theme</button>
+    )    
+}
+Button.defaultProps = {
+    theme: "light"
+}
+Button.propTypes = {
+    theme: PropTypes.oneOf(["light", "dark"])
+}
+export default Button
+
+```
