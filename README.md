@@ -817,17 +817,19 @@ export default Button
 themeContext.js
 ```
 import React, {Component} from "react"
-const {Provider, Consumer} = React.createContext()
+const {Provider, Consumer} = React.createContext() // destructuring to get both properties
 class ThemeContextProvider extends Component {
     render() {
         return (
             <Provider value={"dark"}>
-                {this.props.children}
+                {this.props.children} // <= will render anything put here ex ; <App />
             </Provider>
         )
     }
 }
-export {ThemeContextProvider, Consumer as ThemeContextConsumer}
+export {ThemeContextProvider, Consumer as ThemeContextConsumer} 
+// ThemeContextProvider is defined as a component 
+// ThemeContextConsumer is just the Consumer property
 ```
 index.js
 ```
@@ -835,7 +837,7 @@ import React from "react"
 import ReactDOM from "react-dom"
 
 import App from "./App"
-import {ThemeContextProvider} from "./themeContext"
+import {ThemeContextProvider} from "./themeContext" // <= we just import the provide to wrap our App
 
 ReactDOM.render(
     <ThemeContextProvider>
@@ -847,7 +849,7 @@ ReactDOM.render(
 Button.js
 ```
 import React from "react"
-import {ThemeContextConsumer} from "./themeContext"
+import {ThemeContextConsumer} from "./themeContext" // <= we import the ThemeContextConsumer to wrap our Button and get data
 
 function Button(props) {
     return (
