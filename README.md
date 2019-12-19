@@ -813,3 +813,50 @@ Button.propTypes = {
 export default Button
 
 ```
+### Put the provide in it's own file
+themeContext.js
+```
+import React, {Component} from "react"
+const {Provider, Consumer} = React.createContext()
+class ThemeContextProvider extends Component {
+    render() {
+        return (
+            <Provider value={"dark"}>
+                {this.props.children}
+            </Provider>
+        )
+    }
+}
+export {ThemeContextProvider, Consumer as ThemeContextConsumer}
+```
+index.js
+```
+import React from "react"
+import ReactDOM from "react-dom"
+
+import App from "./App"
+import {ThemeContextProvider} from "./themeContext"
+
+ReactDOM.render(
+    <ThemeContextProvider>
+        <App />
+    </ThemeContextProvider>, 
+    document.getElementById("root")
+)
+```
+Button.js
+```
+import React from "react"
+import {ThemeContextConsumer} from "./themeContext"
+
+function Button(props) {
+    return (
+        <ThemeContextConsumer>
+            {theme => (
+                <button className={`${theme}-theme`}>Switch Theme</button>
+            )}
+        </ThemeContextConsumer>
+    )    
+}
+export default Button
+```
