@@ -59,7 +59,7 @@ Card.defaultProps = {
     cardColor: "blue"
 }
 ```
-Note : if I provide a number in a compnent prop I use curly braces : 
+Note : if I provide a number in a component prop I use curly braces : 
 ```
 <Card cardColor="red" width={200} />
 ```
@@ -71,7 +71,7 @@ Card.defaultProps = {
     height:100
 }
 ```
-The whol picture
+The whole picture
 ```
 // app.js
 import React from "react"
