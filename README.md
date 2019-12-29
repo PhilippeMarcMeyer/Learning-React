@@ -35,7 +35,7 @@ const {count:number} = this.state // get a variable number with the value of sta
 ```
 
 ### React.Fragment
-Use <React.Fragement> </React.Fragment> instead of div
+Use <React.Fragement> </React.Fragment> instead of div to avoid nesting to many divs !
 ```
 import React from "react"
 import Child from "./Child"
