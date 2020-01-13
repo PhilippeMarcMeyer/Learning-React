@@ -1,9 +1,18 @@
 # Learning-React
-Personnal notes from Bob Ziroll
+Personnal notes 
+I started to take notes from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
+I think this course is a good one but I will use as a guideline
+there are too many different notions :
+Introduction with state and props
+then High order components, React State etc...
+I have to build real life example at each step to really understand
 
 ## Introduction
 
 ### Arrow functions
+
+It's a reminder about ES6 :
+
 They allow to have no binding for functions in the constructor of class Components.
 Ex : 
 ```
