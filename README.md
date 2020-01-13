@@ -2,19 +2,29 @@
 These are Personnal notes 
 I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
 
-I think this course is a good one so I will use it as a guideline
+I think this course is not a bad one 
 but there are so many different notions :
 Introduction with state and props
 then High order components, React State etc... Hooks
 
 I think it's important to pause the course often and then 
 build real life examples at each step to really understand
+So I will mix with the Net Ninja channel https://www.youtube.com/watch?v=pKYiKbf7sP0
+
 
 ## Introduction
 
+React is a js library using a Virtual DOM
+Compoents looks like HTML but they are made JSX syntax which can hold js as well.
+
+### Setup
+
+in VS Code add the extension : ES7 React/Redux/GraphQL/React-Native snippets
+
+
 ### Arrow functions
 
-It's a reminder about ES6 :
+It's a reminder about ES6 : (scrimba)
 
 They allow to have no binding for functions in the constructor of class Components.
 Ex : 
