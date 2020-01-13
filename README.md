@@ -231,6 +231,48 @@ bruno.bark() // "Woof, I am Bruno"
 ### Children 
 
 The Components are rendered as self closing elements ```<Navbar/> ```
+From a parent (for instance App()) you can pass props
+
+example in App :
+```
+import React from "react"
+function App() {
+    return (
+        <div>
+            <Navbar backgroundColor="firebrick" />
+            <Button backgroundColor="blue" text="Click me!"/>
+        </div>
+    )
+}
+export default App
+```
+But the components can also be rendered as NON self closing elements
+the component wikk then have some common features like style and props
+but will be like a box where you can put other things in
+
+What the teacher emphases is the use of {props.children} to render anything that is put inside the the component tags
+
+```
+function Callout(props) {
+    return (
+        <div className="callout">
+            {props.children}
+        </div>
+    )
+}
+```
+I don't find very interesting at this time because the Callout component is only a div with a class name !
+
+and then in the App component we use the Callout component by putting regular HTML in it
+
+```
+            <Callout>
+                <h2>Don't miss out!</h2>
+                <p>Unless you don't suffer from FOMO, you better make sure you fill out the email form below!</p>
+            </Callout>
+
+```
+
 
 Call for Action 
 Here is a non re-usable component :
