@@ -1,11 +1,14 @@
 # Learning-React
-Personnal notes 
-I started to take notes from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
-I think this course is a good one but I will use as a guideline
-there are too many different notions :
+These are Personnal notes 
+I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
+
+I think this course is a good one so I will use it as a guideline
+but there are so many different notions :
 Introduction with state and props
-then High order components, React State etc...
-I have to build real life example at each step to really understand
+then High order components, React State etc... Hooks
+
+I think it's important to pause the course often and then 
+build real life examples at each step to really understand
 
 ## Introduction
 
