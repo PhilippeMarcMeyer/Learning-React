@@ -1,5 +1,5 @@
 # Learning-React
-These are Personnal notes 
+These are Personal notes 
 I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
 
 I think this course is not a bad one 
