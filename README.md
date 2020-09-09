@@ -1,4 +1,19 @@
 # Learning-React
+
+https://codepen.io/phmmeyer/pen/jOqZjXd
+
+```
+<script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+
+<div id="root">
+  
+</div>
+```
+``` 
+ReactDOM.render(<h1>Hello world!</h1>,document.getElementById("root"));
+```
+
 These are Personal notes 
 I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
 
