@@ -1,7 +1,7 @@
 # Learning-React
 
 https://codepen.io/phmmeyer/pen/jOqZjXd
-
+## First try 
 ```
 <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
@@ -11,8 +11,24 @@ https://codepen.io/phmmeyer/pen/jOqZjXd
 </div>
 ```
 ``` 
-ReactDOM.render(<h1>Hello world!</h1>,document.getElementById("root"));
+ReactDOM.render(<h1>Hello World!</h1>,document.getElementById("root"));
 ```
+Hello World!
+
+## Second try
+```
+const user = {
+  firstName:'Philippe',
+  lastName:'MEYER'
+}
+
+function formatName(){
+  return user.firstName + ' ' +user.lastName
+}
+ReactDOM.render(<h1>Hello {formatName()}</h1>,document.getElementById("root"));
+```
+Hello Philippe MEYER
+
 
 These are Personal notes 
 I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
