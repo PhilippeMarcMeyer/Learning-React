@@ -58,6 +58,11 @@ Delete the npm folder and if there is one npm cache folder.
 
 Run npm clean cache —force ( — force is now required to clean cache)
 
+
+### C:\react>create-react-app hello
+Will create all is neccessary to start a new app
+
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
