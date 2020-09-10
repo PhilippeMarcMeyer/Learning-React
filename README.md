@@ -48,6 +48,16 @@ quite similar !
 ### Installing create-react-app framework
 npm install -g create-react-app
 
+if you got the cb.apply is not a function error
+
+follow these instructions by allaura-dev on github :
+
+C:\Users(your username)\AppData\Roaming
+
+Delete the npm folder and if there is one npm cache folder.
+
+Run npm clean cache —force ( — force is now required to clean cache)
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
