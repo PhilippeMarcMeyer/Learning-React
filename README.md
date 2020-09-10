@@ -1,4 +1,4 @@
-# Learning-React
+# Learning-React WIP
 
 https://codepen.io/phmmeyer/pen/jOqZjXd
 ## First try 
@@ -29,6 +29,7 @@ ReactDOM.render(<h1>Hello {formatName()}</h1>,document.getElementById("root"));
 ```
 Hello Philippe MEYER
 
+# Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
 I started to type while watching from Bob Ziroll Course on Scrimba : https://scrimba.com/g/greact
