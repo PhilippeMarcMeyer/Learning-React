@@ -45,6 +45,9 @@ npm -v
 
 quite similar !
 
+### Installing create-react-app framework
+npm install -g create-react-app
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
