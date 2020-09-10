@@ -29,6 +29,22 @@ ReactDOM.render(<h1>Hello {formatName()}</h1>,document.getElementById("root"));
 ```
 Hello Philippe MEYER
 
+## Intallations
+
+You need node.js : https://nodejs.org/en/
+
+version checking : open terminal
+node -v
+
+and also npm (node packet manager) : https://www.npmjs.com/
+
+to download easily all files needed to build react applications
+
+version checking : open terminal
+npm -v
+
+quite similar !
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
