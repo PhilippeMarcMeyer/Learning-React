@@ -62,6 +62,60 @@ Run npm clean cache —force ( — force is now required to clean cache)
 ### C:\react>create-react-app hello
 Will create all is neccessary to start a new app
 
+cd hello
+
+npm start => launch a server to show our application
+
+# Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
+
+Where I learn to use componentDidMount() to fetch data from the back
+
+The app has the following files :
+
+index.js 
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
+```
+
+App.js 
+```
+import React,{Component} from 'react';
+import './App.css';
+
+class App extends Component{
+  constructor(){
+    super();
+    this.state = {
+      users: []
+    }
+  }
+  componentDidMount(){
+    fetch('https:jsonplaceholder.typicode.com/users')
+    .then(response =>response.json())
+    .then(users => this.setState({users:users}))
+  }
+  render(){
+    return (
+      <div className="App">
+      {
+        this.state.monsters.map(users => <h1 key={users.id}> {users.name} </h1>)
+      }
+      </div>
+    );
+  }
+}
+export default App;
+```
 
 # Learning-React OLDER NOTES From a previous course
 
