@@ -68,6 +68,8 @@ npm start => launch a server to show our application
 
 # Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
 
+(I prefer this course !)
+
 Where I learn to use componentDidMount() to fetch data from the back
 
 The app has the following files :
@@ -128,14 +130,15 @@ in App.js, I import another component names CardList
       <div className="App">
         <CardList name="Phil"> // This will appear as props.name in the CardList component
         {
-          this.state.users.map(users => <h1 key={users.id}> {users.name} </h1>) // this will appear as props.children in the CardList component
+          this.state.users.map(users => <h1 key={users.id}> {users.name} </h1>) 
+          // this will appear as props.children in the CardList component
         }
         </CardList>
       </div>
     );
   }
 ```
-CarList component :
+CardList component :
 ```
 import React from 'react';
 
@@ -145,6 +148,11 @@ export const CardList = (props) => {
     return (<div className='card-list'>{props.children}</div>)
 };
 ```
+
+Components only care about their role 
+
+
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
