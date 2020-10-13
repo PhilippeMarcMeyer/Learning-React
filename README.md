@@ -117,6 +117,34 @@ class App extends Component{
 export default App;
 ```
 
+### props.children
+
+I cannot make a complete summary of the course, just a few notes to remember key concepts :
+
+in App.js, I import another component names CardList
+```
+  render(){
+    return (
+      <div className="App">
+        <CardList name="Phil"> // This will appear as props.name in the CardList component
+        {
+          this.state.users.map(users => <h1 key={users.id}> {users.name} </h1>) // this will appear as props.children in the CardList component
+        }
+        </CardList>
+      </div>
+    );
+  }
+```
+CarList component :
+```
+import React from 'react';
+
+import './card-list.styles.css';
+
+export const CardList = (props) => {
+    return (<div className='card-list'>{props.children}</div>)
+};
+```
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
