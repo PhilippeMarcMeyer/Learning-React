@@ -209,6 +209,9 @@ export const Card = props => (
     </div>
 )
 ```
+Note : setState() function has an optional 2nd callback parameter
+
+Todo : write about synthetic events in react
 
 # Learning-React OLDER NOTES From a previous course
 
