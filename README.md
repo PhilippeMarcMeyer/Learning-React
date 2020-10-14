@@ -1,4 +1,5 @@
 # Learning-React WIP
+### Personnal notes
 
 https://codepen.io/phmmeyer/pen/jOqZjXd
 ## First try 
@@ -66,11 +67,17 @@ cd hello
 
 npm start => launch a server to show our application
 
+If the installation does not work, try reinstalling everything
+
 # Complete React Developer in 2020 (w/ Redux, Hooks, GraphQL)
+
+https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
+
+by Andrei Neagoie and Yihua Zhang
 
 (I prefer this course !)
 
-Where I learn to use componentDidMount() to fetch data from the back
+Where I learn to use componentDidMount() to fetch data from the back and many other things
 
 The app has the following files :
 
@@ -104,13 +111,13 @@ class App extends Component{
   componentDidMount(){
     fetch('https:jsonplaceholder.typicode.com/users')
     .then(response =>response.json())
-    .then(users => this.setState({users:users}))
+    .then(monsters => this.setState({monsters:monsters}))
   }
   render(){
     return (
       <div className="App">
       {
-        this.state.monsters.map(users => <h1 key={users.id}> {users.name} </h1>)
+        this.state.monsters.map(users => <h1 key={monsters.id}> {monsters.name} </h1>)
       }
       </div>
     );
@@ -123,6 +130,15 @@ export default App;
 
 I cannot make a complete summary of the course, just a few notes to remember key concepts :
 
+The exercice is a monster gallery where monsters can be search by name
+so we have 3 layers or components 
+- The App
+- The CardList (list of monsters)
+- The Card : 1 particular monster
+
+The App component fetches an array of random people (that we are gonna turn into monsters ;-))
+
+
 in App.js, I import another component names CardList
 ```
   render(){
@@ -130,7 +146,7 @@ in App.js, I import another component names CardList
       <div className="App">
         <CardList name="Phil"> // This will appear as props.name in the CardList component
         {
-          this.state.users.map(users => <h1 key={users.id}> {users.name} </h1>) 
+          this.state.monsters.map(monsters => <h1 key={monsters.id}> {monsters.name} </h1>) 
           // this will appear as props.children in the CardList component
         }
         </CardList>
@@ -149,9 +165,50 @@ export const CardList = (props) => {
 };
 ```
 
-Components only care about their role 
+Components only care about their role and should be responsible for the data they manage
+so the CardList should managge the array of monsters itself :
 
+```
+// App.js is modified :
+...
+  render(){
+    return (
+      <div className="App">
+        <CardList monsters={this.state.monsters}/>
+      </div>
+    );
+  }
+ ... 
+ 
+ // card-list.component also :
+ 
+export const CardList = props => (
+    <div className='card-list'>
+        {
+          props.monsters.map(monster => (
+            <Card key={monster.id} monster={monster}/> 
+          ))
+        }
+    </div>
+);
+// I don't get at this time why the key is not in the Card.component, we'll see later
 
+// And we've got a card.component :
+
+import React from 'react';
+import './card.component.styles.css';
+
+export const Card = props => (
+    <div className='card-container'>
+        <img 
+            alt='monster' 
+            src={`https://robohash.org/${props.monster.id}?set=set2&size=180x180`} // Really cool API !
+        />
+        <h2>{props.monster.name}</h2>
+        <p>{props.monster.email}</p>
+    </div>
+)
+```
 
 # Learning-React OLDER NOTES From a previous course
 
