@@ -211,7 +211,8 @@ export const Card = props => (
 ```
 Note : setState() function has an optional 2nd callback parameter
 
-Todo : write about synthetic events in react
+Todo : write about synthetic events in react https://fr.reactjs.org/docs/events.html
+A synthetic event is a react event pretending to be a DOM event, for react to manage its components
 
 # Learning-React OLDER NOTES From a previous course
 
