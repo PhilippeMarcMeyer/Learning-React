@@ -214,6 +214,40 @@ Note : setState() function has an optional 2nd callback parameter
 Todo : write about synthetic events in react https://fr.reactjs.org/docs/events.html
 A synthetic event is a react event pretending to be a DOM event, for react to manage its components
 
+After a while working on the project, here comes the 'this' affair 
+
+A function declared in our Class component cannot explicitly use the this keywork to refer to the class context
+
+```
+  handleChange(e){
+    this.setState({searchField:e.target.value})
+  }
+```
+2 solutions :
+
+Use bind to declare the function inside the constructor
+```
+  constructor(){
+    super();
+    this.state = {
+      monsters: [],
+      searchField:''
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
+```
+
+or better (because simpler) use the arrow functions capability of referencing the outer this context 
+```
+  handleChange(e){
+    this.setState({searchField:e.target.value})
+  }
+  // becomes :
+  handleChange = (e) => {
+    this.setState({searchField:e.target.value})
+  }
+
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
