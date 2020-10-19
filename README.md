@@ -288,6 +288,18 @@ handleClick = () => {
   }
 }
 ```  
+Note : if you need to use props in the constructor, just pass props as a parameter 
+
+```  
+class App extends React.Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      meaningOfLife : 42
+    }
+  }
+}
+``` 
 
 # Learning-React OLDER NOTES From a previous course
 
