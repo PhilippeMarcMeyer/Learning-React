@@ -301,6 +301,24 @@ class App extends React.Component {
 }
 ``` 
 
+## Life cycle methods
+
+They are listeners that give us hooks to perform some actions
+
+shouldComponentUpdate(nextProps, nextState) is very important
+
+in a component you can check if it should be rendered depending on state changes
+
+We won't render if the props specific to that component haven't changed
+
+``` 
+shouldComponentUpdate(nextProps, nextState){
+  return nextProps.mySpecificProp != this.props.mySpecificProp
+}
+
+``` 
+
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
