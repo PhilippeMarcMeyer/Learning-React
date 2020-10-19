@@ -284,7 +284,7 @@ Update State
 ```  
 handleClick = () => {
   this.setState((prevState,prevProps) => {
-    return {meaningOfLife: this.state.meaningOfLife +1}
+    return {meaningOfLife: prevState.meaningOfLife +1}
   }
 }
 ```  
