@@ -246,7 +246,48 @@ or better (because simpler) use the arrow functions capability of referencing th
   handleChange = (e) => {
     this.setState({searchField:e.target.value})
   }
+```  
+See the result in https://github.com/PhilippeMarcMeyer/monsters-rolodex
 
+### Lesson 52 : Asynchronous state
+
+Calls to setState are asynchronous
+
+React handles re-rendering for us
+
+The callback in setState function is just there for debugging reasons.
+
+It is good practise to pass a function as the first parameter of setState call in order to be sure its the last version of the state that will be used for the update.
+
+Make a very simple state :
+```  
+class App extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      meaningOfLife : 42
+    }
+  }
+}
+```  
+Make a button to update state
+```  
+<p>
+  {this.state.meaningOfLife}
+</p>
+<button 
+  onClick={this.handleClick}
+>
+Update State
+</button>
+```  
+```  
+handleClick = () => {
+  this.setState((prevState,prevProps) => {
+    return {meaningOfLife: this.state.meaningOfLife +1}
+  }
+}
+```  
 
 # Learning-React OLDER NOTES From a previous course
 
