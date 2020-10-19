@@ -305,6 +305,8 @@ class App extends React.Component {
 
 They are listeners that give us hooks to perform some actions
 
+For instance componentDidMount() tells us the component is ready and that it is time to fetch some date for instance
+
 shouldComponentUpdate(nextProps, nextState) is very important
 
 in a component you can check if it should be rendered depending on state changes
