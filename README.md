@@ -319,7 +319,19 @@ shouldComponentUpdate(nextProps, nextState){
 }
 
 ``` 
+## Before Going further :
 
+**React Concepts**
+
+1. Don't touch the DOM, it's React's job.
+2. Build websites like lego blocks (if possible, reusable blocks!)
+3. Unidirectional data flow (from top to bottom)
+
+**React dev job is :**
+
+1. Decide on Components
+2. Decide the State and where it lives
+3. What changes when state changes (think also about shouldComponentUpdate !)
 
 # Learning-React OLDER NOTES From a previous course
 
