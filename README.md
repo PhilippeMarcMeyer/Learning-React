@@ -347,6 +347,8 @@ I think it's important to pause the course often and then
 build real life examples at each step to really understand
 So I will mix with the Net Ninja channel https://www.youtube.com/watch?v=pKYiKbf7sP0
 
+EDIT 21/10/2020 : I totally changed for another course. this one is too hard (too many notions at the same time)
+
 ## Introduction
 
 React is a js library using a Virtual DOM
