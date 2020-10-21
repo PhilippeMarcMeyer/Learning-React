@@ -332,6 +332,7 @@ shouldComponentUpdate(nextProps, nextState){
 1. Decide on Components
 2. Decide the State and where it lives
 3. What changes when state changes (think also about shouldComponentUpdate !)
+4. UI, the rest is up to you
 
 # Learning-React OLDER NOTES From a previous course
 
