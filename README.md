@@ -1,8 +1,9 @@
 # Learning-React WIP
 ### Personnal notes
 
-https://codepen.io/phmmeyer/pen/jOqZjXd
-## First try 
+
+## First try on codepen
+
 ```
 <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
 <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
