@@ -335,6 +335,13 @@ shouldComponentUpdate(nextProps, nextState){
 3. What changes when state changes (think also about shouldComponentUpdate !)
 4. UI, the rest is up to you
 
+## NEW PROJECT : eCommerce platform CRWN-CLOTHING
+```
+create-react-app crwn-clothing
+cd crwn-clothing
+yarn start
+```
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
