@@ -346,6 +346,9 @@ We are building the different components (see the repo)
 
 and then adding SASS a css preprocessor
 
+```
+yarn add node-sass
+```
 
 # Learning-React OLDER NOTES From a previous course
 
