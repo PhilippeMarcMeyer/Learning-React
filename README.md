@@ -342,6 +342,11 @@ cd crwn-clothing
 yarn start
 ```
 
+We are building the different components (see the repo)
+
+and then adding SASS a css preprocessor
+
+
 # Learning-React OLDER NOTES From a previous course
 
 These are Personal notes 
