@@ -325,3 +325,35 @@ Sass extension is .scss
 
 Note to myself : learn flex (css) it looks great !
 
+With SASS, what normal css selectors can be nested within each others
+
+```
+.main-div { 
+
+  .other-div{
+
+  }
+}
+
+```
+equivalent of : 
+```
+.main-div .other-div{
+
+}
+
+```
+
+This in convenient for further reading : elements don't look unrelated
+
+and there is also & prefix not to repeat the stryle name :
+
+```
+.main-div { 
+
+  &:first-child{
+
+  }
+}
+
+```
