@@ -320,3 +320,8 @@ and then adding SASS a css preprocessor
 ```
 yarn add node-sass
 ```
+
+Sass extension is .scss
+
+Note to myself : learn flex (css) it looks great !
+
