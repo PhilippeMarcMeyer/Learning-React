@@ -31,6 +31,19 @@ Delete the npm folder and if there is one npm cache folder.
 
 Run npm clean cache —force ( — force is now required to clean cache)
 
+note : when you create a new app, the create-react-app version is automaticaly updated to teh latest version which can be a problem is you are xorkin on the same app (same github repo) on several computers (beacause only the dev part is saved on github) 
+
+goto :
+
+https://github.com/facebook/create-react-app/blob/master/CHANGELOG.md
+
+**example : **
+
+```
+npm install --save --save-exact react-scripts@4.0.0
+//or
+yarn add --exact react-scripts@4.0.0
+```
 
 ### C:\react>create-react-app hello
 Will create all is neccessary to start a new app
