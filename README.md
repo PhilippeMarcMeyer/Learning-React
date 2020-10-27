@@ -397,5 +397,5 @@ ReactDOM.render(
 );
 ```
 
-Wrappint BrowserRouter component around our app gives it new functionnalities
+Wrapping BrowserRouter component around our app gives it new functionnalities
 
