@@ -370,3 +370,29 @@ and there is also & prefix not to repeat the stryle name :
 }
 
 ```
+## ROUTING 
+
+Hijacking the browser history thanks to the history API
+
+Installing react-router-dom
+
+```
+yarn add react-router-dom
+
+```
+Now index.js looks like this :
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+**import {BrowserRouter} from 'react-router-dom';**
+
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
+```
