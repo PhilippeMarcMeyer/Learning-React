@@ -384,7 +384,7 @@ Now index.js looks like this :
 ```
 import React from 'react';
 import ReactDOM from 'react-dom';
-**import {BrowserRouter} from 'react-router-dom';**
+import {BrowserRouter} from 'react-router-dom';
 
 import './index.css';
 import App from './App';
@@ -396,3 +396,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 ```
+
+Wrappint BrowserRouter component around our app gives it new functionnalities
+
