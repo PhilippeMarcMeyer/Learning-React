@@ -425,3 +425,34 @@ function App() {
 
 export default App;
 ```
+
+On the ecommerce app CRWN-CLOTHING 
+
+App.js holds the router, wraps then directory component then wraps (looping) each menu-item component implementation
+
+The directory gives each item a linkUrl prop that will modify the url :
+
+```
+onClick={()=> { 
+  history.push(`${match.url}${linkUrl}`)
+}}>
+```
+Where match.url is the base url and the linkUrl holds 'hats' or 'jacquets'
+
+and so its via the url and the router that we change page.
+
+The router is passed to the menu-item component so it can push to history and trigger the page change
+
+it is done very easily in the menu-item component :
+
+```
+import React from 'react';
+import {withRouter} from 'react-router-dom';
+...
+export default withRouter(MenuItem);
+```
+
+
+
+
+
