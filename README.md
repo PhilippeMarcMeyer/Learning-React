@@ -452,7 +452,10 @@ import {withRouter} from 'react-router-dom';
 export default withRouter(MenuItem);
 ```
 
-
+A note on using svg in react :
+```
+import {ReactComponent as Logo} from '../../assets/crown.svg';
+```
 
 
 
