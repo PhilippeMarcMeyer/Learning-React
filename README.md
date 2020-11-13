@@ -17,6 +17,13 @@
 
 ## Intallations
 
+EDIT : If you need several version of nodejs fro différent projects
+
+then use nvm (Node Version Manager)
+
+https://github.com/coreybutler/nvm-windows
+
+
 You need node.js : https://nodejs.org/en/
 
 version checking : open terminal
