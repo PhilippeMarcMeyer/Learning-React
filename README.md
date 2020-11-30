@@ -544,9 +544,53 @@ class Directory extends React.Component {
 }
 export default Directory;
 ```
+Explanations :
 
+the state holds an array called sections
+        {
+          title: 'hats',
+          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+          id: 1,
+          size: 'large',
+          linkUrl: 'hats'
+        }
+The div loops to create as much menuItem as there are items in the array
+passing the props to the menuItem component with a key correspnding the the id prop
+and the other props sent by destructuring the object
 
+```
+import React from 'react';
 
+import {withRouter} from 'react-router-dom';
+
+import './menu-item.styles.scss';
+
+const MenuItem = ({title,imageUrl,size,history,linkUrl,match}) => {
+    return (
+        <div className = {`${size} menu-item`} onClick={()=> { 
+            history.push(`${match.url}${linkUrl}`)
+            }}>
+            <div className='background-image' style={{
+                backgroundImage:`url(${imageUrl})`
+            }}/>
+            <div className = 'content'>
+                <h1 className='title'>{title.toUpperCase()}</h1>
+                <span className='subtitle'>SHOP NOW</span>
+            </div>
+        </div>
+    )
+}
+
+export default withRouter(MenuItem);
+```
+We ca see than the menuItem component receives an object as props
+
+{title,imageUrl,size,history,linkUrl,match}
+
+What was not sent by the state was the prop "match"
+
+So from where does it comes ?
+It comes from the router
 
 ## ROUTING 
 
