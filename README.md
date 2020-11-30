@@ -376,6 +376,18 @@ and there is also & prefix not to repeat the stryle name :
 }
 
 ```
+## Overall structure :
+
+In the source folder we have got few files at the root :
+the rest is organised in sub folders
+
+* Index.js + index.css
+* App.js + App.css
+> assets
+> components
+> pages
+
+
 ## ROUTING 
 
 Hijacking the browser history thanks to the history API
