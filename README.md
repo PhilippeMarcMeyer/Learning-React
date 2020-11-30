@@ -1,6 +1,11 @@
 # Learning-React
 ### Personnal notes
 
+Links :
+
+[CRWN-CLOTHING](#CRWN-CLOTHING)
+
+
 **React Concepts**
 
 1. Don't touch the DOM, it's React's job.
@@ -324,8 +329,8 @@ shouldComponentUpdate(nextProps, nextState){
 }
 
 ``` 
-
-## NEW PROJECT : eCommerce platform CRWN-CLOTHING
+<a name="CRWN-CLOTHING">CRWN-CLOTHING</a>
+## NEW PROJECT : eCommerce platform CRWN-CLOTHING 
 ```
 create-react-app crwn-clothing
 cd crwn-clothing
