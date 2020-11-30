@@ -381,13 +381,30 @@ and there is also & prefix not to repeat the stryle name :
 In the source folder we have got few files at the root :
 the rest is organised in sub folders
 
+Files :
 - Index.js + index.css
 - App.js + App.css
 
-> assets
-> components
-> pages
+Folders :
+- assets
+- components
+- pages
 
+assets : can hold elements such as images
+
+pages : are well pages it means containers that can be routed via a menu
+
+each different in its own folder and ech composed of 2 files : jsx ans scss
+
+- homepage
+  - homepage.component.jsx
+  - homepage.styles.scss
+- shop
+  - shop.component.jsx
+  - shop.styles.scss
+- sign-in-and-sign-out
+  - sign-in-and-sign-out.component.jsx
+  - sign-in-and-sign-out.styles.scss
 
 ## ROUTING 
 
