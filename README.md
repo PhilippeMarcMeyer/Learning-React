@@ -406,6 +406,143 @@ each different in its own folder and ech composed of 2 files : jsx ans scss
   - sign-in-and-sign-out.component.jsx
   - sign-in-and-sign-out.styles.scss
 
+Each jsx file is either a functional stateless component or a statefull class component depending on the fact it needs or not data
+
+components are reusable components (part of pages) that are used by pages or other components (russian doll structure)
+alike pages they are also organised in folders holding 2 files : 1 jsx for templating and 1 scss for styling
+
+To illustrate the "russian doll" system :
+
+- homepage
+  - homepage.component.jsx
+    - directory
+      - directory-component.jsx
+       - menu-item
+         - menu-item-component.jsx
+         - menu-item-styles.scss
+      - directory-styles.scss
+  - homepage.styles.scss
+
+The homepage is only 1 page among others although it is the default one
+
+index.js is main :
+```
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {BrowserRouter} from 'react-router-dom';
+
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.getElementById('root')
+);
+```
+
+App.js comes above :
+```
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import './App.css';
+
+import HomePage from './pages/homepage/homepage.component';
+import ShopPage from './pages/shop/shop.component';
+import Header from './components/header/header.component';
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route exact path='/shop' component={ShopPage} />
+      </Switch>
+    </div>
+  );
+}
+export default App;
+```
+We see a Headercomponent that is shared by all pages 
+```
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+import './header.styles.scss';
+import {ReactComponent as Logo} from '../../assets/crown.svg';
+
+const Header = () => (
+    <div className='header'>
+        <Link className='logo-container' to="/">
+            <Logo className='logo'/>
+        </Link>
+        <div className='options'>
+            <Link className='option' to='/shop'>
+            SHOP
+            </Link>
+            <Link className='option' to='/shop'>
+            CONTACT
+            </Link>
+            <Link className='option' to='/sign'>
+            SIGN
+            </Link>
+        </div>
+    </div>
+)
+export default Header;
+```
+For every jsx file, we need to decide if we prefer a functional or class component:
+
+For instance, the homepage.component.jsx is stateless and the data comes with the directory.component.jsx which passes state to the numerous menu-item compnents
+
+**homepage**
+```
+import React from 'react';
+
+import Directory from '../../components/directory/directory.component';
+
+import './homepage.styles.scss';
+
+const HomePage = () => (
+    <div className = 'homepage'>
+        <Directory/>
+    </div>
+)
+
+export default HomePage;
+```
+**directory**
+```
+import React from 'react';
+
+import MenuItem from '../menu-item/menu-item.component';
+
+import './directory.styles.scss';
+
+class Directory extends React.Component {
+  constructor() {
+    super();
+    this.state = {...};
+   }
+ render() {
+    return (
+      <div className='directory-menu'>
+        {this.state.sections.map(({ id,...otherSectionProps}) => (
+          <MenuItem key={id} {...otherSectionProps} />
+        ))}
+      </div>
+    );
+  }
+}
+export default Directory;
+```
+
+
+
+
 ## ROUTING 
 
 Hijacking the browser history thanks to the history API
